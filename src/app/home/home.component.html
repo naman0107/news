@@ -1,0 +1,147 @@
+<div class="container">
+  <div class="row blog-style-wrapper-main">
+    <div
+      *ngFor="let news of newArticles"
+      class="col-lg-4 col-md-6 col-12 mb-50 mt-4"
+    >
+      <div class="blog-post-wrapper">
+        <div class="blog-post-media">
+          <div class="blog-post-media-part">
+            <a
+              target="_blank"
+              href="{{ news.url }}"
+              class="blog-post-feature-link"
+            >
+              <img
+                src="{{ news.urlToImage }}"
+                alt="{{ news.title }}"
+                title="{{ news.title }}"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="blog-post-content p-3">
+          <h4 class="blog-post-title mb-3">
+            <a target="_blank" href="{{ news.url }}">{{ news.title }}</a>
+          </h4>
+          <div class="blog-post_text">
+            <p>
+              {{ news.content }}
+            </p>
+          </div>
+          <div class="clear"></div>
+          <div class="blog-post-meta-wrap d-flex col align-self-end pt-3">
+            <div class="meta-wrapper">
+              <span class="author-post">
+                <img
+                  src="https://picsum.photos/200/300"
+                  alt="Mukesh Variyani"
+                  title="Mukesh Variyani"
+                  height="30px"
+                  width="30px"
+                />
+                <a href="#">{{ news.author }}</a>
+              </span>
+              <br />
+              <span class="date-post">{{ news.publishedAt }}</span>
+            </div>
+            <div class="blog-post-info-wrap">
+              <div class="share-post-container">
+                <a href="#">
+                  <img
+                    src="https://www.finbyz.com/static/media/svg/share-btn.svg"
+                    alt="share"
+                    title="share"
+                  />
+                </a>
+                <div class="share-social-wpapper mr-3 mr-sm-3 mr-md-3 mr-xl-0 ">
+                  <ul class="mb-0 p-2">
+                    <li>
+                      <a
+                        class="share-post share-facebook"
+                        target="_blank"
+                        href="#"
+                      >
+                        <img
+                          alt="facebook.com/Finbyz"
+                          title="facebook.com/Finbyz"
+                          class="footer-icon-social"
+                          src="https://www.finbyz.com/static/media/svg/social-share-facebook.svg"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        class="share-post share-twitter"
+                        target="_blank"
+                        href="#"
+                      >
+                        <img
+                          alt="twitter.com/FinByz"
+                          title="Twitter/FinByz"
+                          class="footer-icon-social"
+                          src="https://www.finbyz.com/static/media/svg/social-share-twitter.svg"
+                      /></a>
+                    </li>
+                    <li>
+                      <a
+                        class="share_post share-google share-mail"
+                        target="_blank"
+                        href="#"
+                      >
+                        <img
+                          alt="mail.com/FinByz"
+                          title="Mail/FinByz"
+                          class="footer-icon-social"
+                          src="https://www.finbyz.com/static/media/svg/social-share-mail.svg"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="share_post share-pinterest"
+                        target="_blank"
+                        href="#"
+                      >
+                        <img
+                          alt="pinterest.com/FinByz"
+                          title="Pinterest/FinByz"
+                          class="footer-icon-social"
+                          src="https://www.finbyz.com/static/media/svg/social-share-pinterest.svg"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="share_post share-linkedin"
+                        target="_blank"
+                        href="#"
+                      >
+                        <img
+                          alt="linkedin.com/FinByz"
+                          title="linkedin/FinByz"
+                          class="footer-icon-social"
+                          src="https://www.finbyz.com/static/media/svg/social-share-linkedin.svg"
+                        />
+                      </a>
+                    </li>
+                    <li class="d-inline-block d-sm-inline-block d-xl-none">
+                      <a
+                        class="share_post share-whatsapp"
+                        target="_blank"
+                        href="#"
+                      >
+                        <img
+                          src="https://www.finbyz.com/static/media/svg/social-share-whatsapp.svg"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
