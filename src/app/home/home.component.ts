@@ -22,32 +22,18 @@ export class HomeComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.route.params.subscribe(params => {
-      if (params.cc == "all") {
-        this.url =
-          "https://newsapi.org/v2/sources?apiKey=ddca9df7dc5f46e49b6276694711cf0e";
+      this.url =
+        "https://newsapi.org/v2/top-headlines?country=" +
+        params.cc +
+        "&apiKey=ddca9df7dc5f46e49b6276694711cf0e";
 
-        this.newArticles = [];
+      this.newArticles = [];
 
-        this.apiService.getArticles(this.url).subscribe(res => {
-          for (let i = 0; i < res.sources.length; i++) {
-            this.newArticles.push(res.articles[i]);
-          }
-        });
-        console.log(this.newArticles);
-      } else {
-        this.url =
-          "https://newsapi.org/v2/top-headlines?country=" +
-          params.cc +
-          "&apiKey=ddca9df7dc5f46e49b6276694711cf0e";
-
-        this.newArticles = [];
-
-        this.apiService.getArticles(this.url).subscribe(res => {
-          for (let i = 0; i < res.articles.length; i++) {
-            this.newArticles.push(res.articles[i]);
-          }
-        });
-      }
+      this.apiService.getArticles(this.url).subscribe(res => {
+        for (let i = 0; i < res.articles.length; i++) {
+          this.newArticles.push(res.articles[i]);
+        }
+      });
     });
   }
   ngOnInit() {}

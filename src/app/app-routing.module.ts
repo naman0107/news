@@ -5,7 +5,7 @@ import { NewsComponent } from "./news/news.component";
 import { AboutComponent } from "./about/about.component";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "", component: NewsComponent },
   { path: "country/:cc", component: HomeComponent, pathMatch: "full" }
 ];
 
