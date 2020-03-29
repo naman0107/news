@@ -1,4 +1,6 @@
 # News
+This is the REST API based new application in Angular 8.
+You can check realtime news based on the country.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
