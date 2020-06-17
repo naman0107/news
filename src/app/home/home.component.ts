@@ -7,10 +7,10 @@ import { Observable } from "rxjs";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"]
+  styleUrls: ["./home.component.css"],
 })
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class HomeComponent implements OnInit {
   newArticles: any = [];
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     private apiService: ApiService,
     private route: ActivatedRoute
   ) {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       this.url =
         "https://newsapi.org/v2/top-headlines?country=" +
         params.cc +
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
 
       this.newArticles = [];
 
-      this.apiService.getArticles(this.url).subscribe(res => {
+      this.apiService.getArticles(this.url).subscribe((res) => {
         for (let i = 0; i < res.articles.length; i++) {
           this.newArticles.push(res.articles[i]);
         }
